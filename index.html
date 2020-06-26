@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALERT.net</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body class="grid-principal">
+    <aside class="barra-lateral">
+        <header class="header">
+
+            <a href="index.html">
+                <img src="img/logo.png" alt="logotipo" class="logotipo">
+            </a>
+
+            <h1>Servicio de Alerta Residencial</h1>
+        </header>
+
+        <nav class="navegacion">
+            <a href="nosotros.html">Nosotros</a>
+            <a href="planes.html">Planes</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="soporte.hmtl">Soporte</a>
+        </nav>
+
+        <footer class="footer">
+            <p>Todos los derechos reservados 2020&copy;</p>
+        </footer>
+    </aside>
+
+    <section class="seccion-hero">
+
+        <h2>Donde tu Seguridad Comienza</h2>
+
+        <div class="contenedor-iniciosesion">
+
+            <p>Inicia Sesion</p>
+            <div class="iniciosesion">
+
+                <form class="formulario">
+
+                    <label for="residencia">Urbanizacion o Residencia:</label>
+                    <select name="" id="residencia" required>
+                        <option value="" disabled selected>Seleccione</option>
+                        <option value="residenciasmacau">Residencias Macau</option>
+                        <option value="urblaorquidea">Urb. La Orquidea</option>
+                        <option value="urbaguaclara">Urbanizacion Agua Clara</option>
+                        <option value="eloasis">Urbanizacion el Oasis</option>
+                        <option value="marinadelrey">Marina del Rey</option>
+                        <option value="losnaranjos">Urbanizacion Los Naranjos</option>
+
+                    </select>
+
+                    <label for="cedula">C.I:</label>
+                    <input type="number" id="cedula" min="1" placeholder="Documento de identidad" required>
+
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" placeholder="Contraseña" required>
+
+                    <input type="submit" value="Conectar" class="boton">
+                    <input type="submit" value="Registrar" class="boton">
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

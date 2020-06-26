@@ -1,0 +1,182 @@
+/************************************************************************ CONFIGURACION GLOBAL ***************************************************************/
+html
+{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before,:after
+{
+    box-sizing: inherit;
+}
+body
+{
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+img
+{
+    max-width: 100%;
+}
+h1
+{
+   font-size: 3.8rem;
+}
+h2
+{
+    font-size: 3.4rem;
+}
+h3
+{
+    font-size: 3rem;
+}
+h4
+{
+    font-size: 2.6rem;
+}
+a{
+    text-decoration: none;
+}
+/******************************************************************************* UTILIDADES ****************************************************************************/
+.contenedor
+{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+.logotipo{
+    width: 25rem;
+}
+/********************************************************************************** GRID PRINCIPAL ************************************************************************/
+.grid-principal{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+/*************************************************************************************ASIDE ***********************************************************************/
+.barra-lateral{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    box-shadow: 20px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+/*********************************************************************************** HEADER **************************************************************************/
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* min-height: 50vh; */
+}
+.header h1{
+    color: #535353;
+    max-width: 30rem;
+    text-align: center;
+    margin: 0;
+}
+/**********************************************************************************NAVEGACION *************************************************************************/
+/* .navegacion{
+    
+} */
+.navegacion a{
+    display: block;
+    background-color: white;
+    color: #ff0000;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 1rem 0;
+    max-width: 95%;
+    margin: 0 auto;
+
+    border-bottom: 1px solid #535353;
+
+    transition: .5s ease-in-out;
+}
+.navegacion a:hover{
+    background-color: #ff0000;
+    color: #ffffff;
+}
+.navegacion a:last-of-type{
+    border-bottom: none;
+}
+
+/********************************************************************************************* FOOTER ********************************************************************/
+.footer{
+    background-color: #535353;
+}
+.footer p{
+    color: #ffffff;
+    text-align: center;
+    margin: 0 auto;
+}
+/************************************************************************************ SECCION HERO **********************************************************************/
+.seccion-hero{
+    background-image: url(../img/principal.jpg);
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.seccion-hero::after{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.60);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0em;
+}
+.seccion-hero h2{
+    z-index: 1;
+    position: relative;
+
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    max-width: 95%;
+}
+/************************************************************************************** CUADRO INICIO SESION *******************************************************/
+.contenedor-iniciosesion{
+    z-index: 1;
+    position: relative;
+
+    background-color: #ffffff;
+    width: 60%;
+    height: 40%;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+.contenedor-iniciosesion p{
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #535353;
+}
+.formulario{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+
+}
+.boton{
+    margin-top: 2rem;
+    /* grid-column: 1 / 3; */
+    grid-row-gap: 3rem;
+
+    color: #ffffff;
+    background-color: #ff0000;
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
