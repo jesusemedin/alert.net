@@ -10,10 +10,14 @@ html
 }
 body
 {
-    height: 100vh;
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
     line-height: 2;
+}
+@media (min-width: 768px){
+    body{
+        height: 100vh;
+    }
 }
 img
 {
@@ -49,17 +53,22 @@ a{
     width: 25rem;
 }
 /********************************************************************************** GRID PRINCIPAL ************************************************************************/
-.grid-principal{
-    display: grid;
-    grid-template-columns: 25% 75%;
+@media (min-width: 768px){
+    .grid-principal{
+        display: grid;
+        grid-template-columns: 25% 75%;
+    }
 }
 /*************************************************************************************ASIDE ***********************************************************************/
-.barra-lateral{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 1;
-    box-shadow: 20px 0px 20px 0px rgba(0, 0, 0, 0.5);
+
+@media (min-width: 768px){
+    .barra-lateral{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1;
+        box-shadow: 20px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    }
 }
 /*********************************************************************************** HEADER **************************************************************************/
 .header{
@@ -94,6 +103,11 @@ a{
 
     transition: .5s ease-in-out;
 }
+@media (min-width: 768px){
+    .navegacion a:first-of-type{
+        display: none;
+    }
+}
 .navegacion a:hover{
     background-color: #ff0000;
     color: #ffffff;
@@ -103,7 +117,7 @@ a{
 }
 
 /********************************************************************************************* FOOTER ********************************************************************/
-.footer{
+.footer {
     background-color: #535353;
 }
 .footer p{
@@ -111,9 +125,19 @@ a{
     text-align: center;
     margin: 0 auto;
 }
+.footer-desktop{
+    display: none;
+}
+@media (min-width: 768px){
+    .footer-desktop{
+    display: unset;
+    }
+    .footer-mobile{
+        display: none;
+    }
+}
 /************************************************************************************ SECCION HERO **********************************************************************/
 .seccion-hero{
-    background-image: url(../img/principal.jpg);
     position: relative;
     background-position: center center;
     background-size: cover;
@@ -123,41 +147,64 @@ a{
     justify-content: space-evenly;
     align-items: center;
 }
-.seccion-hero::after{
-    content: '';
-    background-color: rgba(0, 0, 0, 0.60);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0em;
+@media (min-width: 768px){
+    .seccion-hero{
+        background-image: url(../img/principal.jpg);
+    }
+    .seccion-hero::after{
+        content: '';
+        background-color: rgba(0, 0, 0, 0.60);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0em;
+    }
 }
 .seccion-hero h2{
-    z-index: 1;
-    position: relative;
-
-    color: #ffffff;
+    color: #535353;
     text-align: center;
     text-transform: uppercase;
     font-weight: 300;
     max-width: 95%;
+    margin: 0;
+}
+@media (min-width: 768px){
+    .seccion-hero h2{
+        z-index: 1;
+        position: relative;
+        color: #ffffff;
+    }
 }
 /************************************************************************************** CUADRO INICIO SESION *******************************************************/
 .contenedor-iniciosesion{
     z-index: 1;
     position: relative;
-
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+@media (min-width: 768px){
+    .contenedor-iniciosesion{
     background-color: #ffffff;
-    width: 60%;
-    height: 40%;
+    /* width: 60%;
+    height: 40%; */
+    padding: 1rem;
     box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
+    }
+    .contenedor-iniciosesion p{
+        text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #535353;
+    }
 }
 .contenedor-iniciosesion p{
     text-align: center;
     font-size: 3rem;
     text-transform: uppercase;
     color: #535353;
+    margin: 0;
 }
 .formulario{
     display: grid;
@@ -166,6 +213,7 @@ a{
     margin: 0 auto;
     max-width: 90%;
     text-align: center;
+    text-transform: uppercase;
 
 }
 .boton{
